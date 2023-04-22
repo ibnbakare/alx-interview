@@ -1,9 +1,7 @@
 #!/usr/bin/python3
 
-
 '''A module for working with Pascal's triangle.
 '''
-
 
 def pascal_triangle(n):
     '''Creates a list of lists of integers representing
@@ -21,23 +19,6 @@ def pascal_triangle(n):
                 line.append(triangle[i - 1][j - 1] + triangle[i - 1][j])
         triangle.append(line)
     return triangle
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 # '''A module for working with Pascal's triangle.
 # '''
 
