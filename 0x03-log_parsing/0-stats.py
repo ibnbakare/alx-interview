@@ -1,11 +1,11 @@
 #!/usr/bin/python3
-'''parsing HTTP request logs.
+'''A script for parsing HTTP request logs.
 '''
 import re
 
 
 def extract_input(input_line):
-    '''sections of a line of an HTTP request log.
+    '''Extracts sections of a line of an HTTP request log.
     '''
     fp = (
         r'\s*(?P<ip>\S+)\s*',
@@ -29,7 +29,7 @@ def extract_input(input_line):
 
 
 def print_statistics(total_file_size, status_codes_stats):
-    '''accumulated statistics of the HTTP request log.
+    '''Prints the accumulated statistics of the HTTP request log.
     '''
     print('File size: {:d}'.format(total_file_size), flush=True)
     for status_code in sorted(status_codes_stats.keys()):
@@ -39,7 +39,7 @@ def print_statistics(total_file_size, status_codes_stats):
 
 
 def update_metrics(line, total_file_size, status_codes_stats):
-    ''' metrics from a given HTTP request log.
+    '''Updates the metrics from a given HTTP request log.
 
     Args:
         line (str): The line of input from which to retrieve the metrics.
